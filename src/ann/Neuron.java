@@ -8,11 +8,6 @@ public abstract class Neuron extends AbstractNeuron {
 
     protected double netInput(double[] input, double[] weights) {
 
-        // sanity check
-        if(input.length != weights.length) {
-            // handle error
-        }
-
         double net = 0;
         for(int i = 0, l = weights.length; i < l; ++i) {
             net += input[i] * weights[i];
@@ -27,3 +22,13 @@ public abstract class Neuron extends AbstractNeuron {
 
 
 }
+
+
+
+
+/*
+ // sanity check
+        if(input.length != weights.length) {
+            // handle error
+        }
+ */

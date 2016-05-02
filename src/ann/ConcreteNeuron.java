@@ -5,17 +5,10 @@ package ann;
  */
 public class ConcreteNeuron extends Neuron {
 
-    public ConcreteNeuron(double[] weights, int numInputs, int numOutputs) {
+    public ConcreteNeuron(double[] weights) {
+
         if(weights != null) {
             this.weights = weights;
-        } else {
-            this.weights = new double[numInputs];
-
-            double b = Math.sqrt( 6 / (numInputs + numOutputs));
-
-            for(int i = 0; i < numInputs; ++i) {
-                this.weights[i] = Math(-b, b);
-            }
         }
     }
 
@@ -27,3 +20,28 @@ public class ConcreteNeuron extends Neuron {
         return activation;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+        , int numInputs, int numOutputs
+
+        else {
+            this.weights = new double[numInputs];
+
+            double b = Math.sqrt( 6 / (numInputs + numOutputs));
+
+            for(int i = 0; i < numInputs; ++i) {
+                this.weights[i] = Math(-b, b);
+            }
+        } */
